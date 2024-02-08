@@ -1,140 +1,120 @@
 var runes = {
-   "chest": [
-      {
-         id: 402877,
-         name: 'Flagellation',
-         description: "Gain a 25% bonus to physical damage done for 12 sec after activating Bloodrage or Berserker Rage.",
-         iconname: 'inv_mace_1h_stratholme_d_01',
-         flagellation: true,
-     },
-     {
-         id: 412507,
-         name: 'Blood Frenzy',
-         description: "Each time you deal Bleed damage, you gain 3 rage.",
-         iconname: 'spell_nature_bloodlust',
-         bleedrage: 3,
-     },
-     {
-         id: 402911,
-         name: 'Raging Blow',
-         description: "A ferocious strike that deals 100% weapon damage, but can only be used while Enrage, Berserker Rage, or Bloodrage is active.",
-         iconname: 'ability_hunter_swiftstrike',
-         enable: 402911
-     },
-     {
-         id: 425421,
-         name: 'Warbringer',
-         description: "Your Charge, Intercept, and Intervene abilities are now usable while in combat and in any stance, and will all remove movement impairing effects when activated.",
-         iconname: 'ability_warrior_warbringer',
-     },
-   ],
-   "legs": [
-      {
-         id: 403219,
-         name: 'Furious Thunder',
-         description: "Thunder Clap now increases the time between attacks by an additional 6% and can be used in any stance.",
-         iconname: 'spell_nature_lightning',
-     },
-     {
-         id: 425418,
-         name: 'Consumed by Rage',
-         description: "Enrages you and grants you a 25% melee damage bonus for 12 sec or up to a maximum of 12 swings after you exceed 80 Rage.",
-         iconname: 'spell_nature_shamanrage',
-         enable: 425418,
-     },
-     {
-         id: 431046,
-         name: 'Frenzied Assault',
-         description: "While wielding 2-handed weapons, your attack speed is increased by 20%.",
-         iconname: 'ability_warrior_unrelentingassault',
-         haste2h: 20,
-     },
-     {
-        id: 403215,
-        name: 'Commanding Shout',
-        description: "",
-        iconname: 'ability_warrior_rallyingcry',
-    },
-   ],
-   "hands": [
-      {
-         id: 402927,
-         name: 'Victory Rush',
-         description: "Instantly attack the target causing Attack power * 45 / 100 damage and healing you for 10% of your maximum health. Only usable within 20 sec after you kill an enemy that yields experience or honor.",
-         iconname: 'ability_warrior_devastate',
-         enable: 402927,
-     },
-     {
-         id: 403218,
-         name: 'Endless Rage',
-         description: "You generate 25% more Rage from all damage you deal.<br />[ASSUMED NO EFFECT ON REFUNDS]",
-         iconname: 'ability_warrior_innerrage',
-         ragemod: 1.25,
-     },
-     {
-         id: 403195,
-         name: 'Devastate',
-         description: "While you are in Defensive Stance and have a shield equipped, Sunder Armor also deals 100% weapon damage, increased by 10% per application of Sunder Armor already on the target.",
-         iconname: 'inv_sword_11',
-         devastate: true,
-     },
-     {
-         id: 430472,
-         name: 'Single-Minded Fury',
-         description: "While dual-wielding, your Physical damage and movement speed are increased by 10%.",
-         iconname: 'inv_relics_totemofrage',
-         dmgdw: 10
-     },
-     {
-         id: 429765,
-         name: 'Quick Strike',
-         description: "A reckless instant melee attack with your two-handed weapon dealing (Attack power * 15 / 100) to (Attack power * 25 / 100) physical damage. This ability benefits from and triggers all effects associated with Heroic Strike.<BR/>[DONT REALLY KNOW HOW THIS WORKS DOES IT INTERACT WITH HS QUEUE?]",
-         iconname: 'inv_axe_03',
-         twohandonly: true,
-         enable: 429765,
-     },
-   ],
-   "waist": [
+    "chest": [
         {
-            id: 413380,
-            name: 'Blood Surge',
-            description: "",
-            iconname: 'ability_warrior_bloodsurge',
-            bloodsurge: true,
+            id: 425589,
+            name: 'Aegis',
+            description: "Increases your block value by 30% and damaging melee and ranged attacks against you have a 10% chance to increase your chance to block by 30%.  Lasts 10 sec or 5 blocks. Effect not cumulative with Redoubt.",
+            iconname: 'inv_shield_48'
         },
         {
-            id: 29787,
-            name: 'Focused Rage',
-            description: "",
-            iconname: 'ability_druid_enrage',
-            focusedrage: true,
+            id: 407778,
+            name: 'Divine Storm',
+            description: "An instant weapon attack that causes 110% of weapon damage to up to 4 enemies within 8 yards.  The Divine Storm heals up to 3 party or raid members totaling 25% of the damage caused.",
+            iconname: 'ability_paladin_divinestorm',
+            enable: 407778
         },
         {
-            id: 402922,
-            name: 'Precise Timing',
+            id: 425600,
+            name: 'Horn of Lordaeron',
+            description: "The Paladin blows the Horn of Lordaeron, which increases total Strength and Agility of all party members within 30 yards by 6. Lasts 2 min. Exclusive with Blessing of Might.",
+            iconname: 'inv_misc_horn_03'
+        },
+        {
+            id: 407798,
+            name: 'Seal of Martyrdom',
+            description: "Fills you with holy spirit for 30 sec",
+            iconname: 'spell_holy_sealofblood',
+            enable: 407798
+        },
+    ],
+    "legs": [
+        {
+            id: 409933,
+            name: 'Avengers Shield',
+            description: "Hurls a holy shield at the enemy",
+            iconname: 'spell_holy_avengersshield',
+            enable: 409933
+        },
+        {
+            id: 407804,
+            name: 'Divine Sacrifice',
+            description: "Enrages you and grants you a 25% melee damage bonus for 12 sec or up to a maximum of 12 swings after you exceed 80 Rage.",
+            iconname: 'spell_holy_powerwordbarrier'
+        },
+        {
+            id: 415076,
+            name: 'Exorcist',
+            description: "Exorcism can now be cast on any target and has 100% increased critical strike chance against Undead and Demons.",
+            iconname: 'spell_holy_retribution',
+            enable: 415076,
+        },
+        {
+            id: 407880,
+            name: 'Inspiration Exemplar',
+            description: "Your inspiring presence periodically dispels Fear and Sleep effects on nearby party members.",
+            iconname: 'spell_holy_power',
+        },
+    ],
+    "hands": [
+        {
+            id: 407613,
+            name: 'Beacon of Light',
             description: "",
-            iconname: 'inv_misc_pocketwatch_02',
-            precisetiming: true,
+            iconname: 'ability_paladin_beaconoflight',
+            enable: 407613,
+        },
+        {
+            id: 407676,
+            name: 'Crusader Strike',
+            description: "",
+            iconname: 'spell_holy_crusaderstrike',
+            enable: 407676,
+        },
+        {
+            id: 407631,
+            name: 'Hand of Reckoning',
+            description: "",
+            iconname: 'spell_holy_unyieldingfaith',
+        },
+    ],
+    "waist": [
+        {
+            id: 426173,
+            name: 'Enlightened Judgements',
+            description: "",
+            iconname: 'ability_paladin_enlightenedjudgements'
+        },
+        {
+            id: 426065,
+            name: 'Infusion of Light',
+            description: "",
+            iconname: 'ability_paladin_infusionoflight',
+        },
+        {
+            id: 426158,
+            name: 'Sheath of Light',
+            description: "",
+            iconname: 'ability_paladin_sheathoflight'
         },
     ],
     "feet": [
         {
-            id: 426490,
-            name: 'Rallying Cry',
+            id: 415059,
+            name: 'Guarded by the Light',
             description: "",
-            iconname: 'ability_warrior_rallyingcry',
+            iconname: 'spell_holy_aspiration',
         },
         {
-            id: 402913,
-            name: 'Enraged Regeneration',
+            id: 412019,
+            name: 'Sacred Shield',
             description: "",
-            iconname: 'ability_warrior_focusedrage',
+            iconname: 'ability_paladin_blessedmending',
         },
         {
-            id: 403338,
-            name: 'Intervene',
+            id: 426157,
+            name: 'The Art of War',
             description: "",
-            iconname: 'ability_warrior_victoryrush',
+            iconname: 'ability_paladin_artofwar',
         },
     ],
 };
